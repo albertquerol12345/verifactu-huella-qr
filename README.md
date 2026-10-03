@@ -6,6 +6,8 @@ Huella (hash) SHA-256 de los registros de facturación VERI*FACTU, URL del QR tr
 - Sin dependencias: biblioteca estándar de Python 3 y Web Crypto (navegador o Node 18 o superior).
 - Licencia MIT.
 
+> **English:** reference implementation of Spain's VERI\*FACTU invoice record hash (SHA-256 chain), tax QR URL and AEAT XML records (RegistroAlta / RegistroAnulacion) in Python and JavaScript, tested against the official AEAT examples and validated against the AEAT XSD schemas. Online calculator: https://cirameva.com/software/verifactu/ · Need the full module (signing, event log or AEAT web-service submission) inside your invoicing software? See https://cirameva.com/software/modulo-verifactu/ (Spanish; we reply in English).
+
 ## Plazos
 
 Según el Real Decreto-ley 15/2025 y la [nota de la AEAT](https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/nota-informativa-ampliacion-plazo-adaptacion-facturacion.html):
