@@ -55,12 +55,23 @@ assert validar(xml) == []
 
 `test_xml.py` construye la cadena alta → alta → anulación con los datos de los ejemplos de la AEAT, comprueba las 3 huellas oficiales y valida el XML (resultado en `ejemplo_RegFactuSistemaFacturacion.xml`). La carpeta `xsd/` copia los esquemas que publica la AEAT (descargados el 3-oct-2026) y el de XML-DSig del W3C; lo único cambiado es la ruta local del xmldsig.
 
+## Puente para Access, Excel con VBA u otros programas antiguos
+
+`verifactu_cli.py` sirve para programas que no calculan SHA-256 ni generan XML por sí mismos. El programa exporta sus facturas nuevas a un CSV y el script devuelve otro CSV con la huella encadenada, la URL del QR y los totales, además del XML de los registros validado contra el XSD. La cadena se guarda en un JSON entre ejecuciones.
+
+```
+python3 verifactu_cli.py nuevas.csv resultado.csv --cadena cadena.json --xml registros.xml --sistema sistema.json [--pruebas]
+```
+
+Desde VBA: `Shell "python verifactu_cli.py C:\fact\nuevas.csv C:\fact\resultado.csv --cadena C:\fact\cadena.json --xml C:\fact\registros.xml --sistema C:\fact\sistema.json", vbHide`. Ejemplo de entrada en `ejemplo_cli/`; prueba en `test_cli.py`.
+
 ## Pruebas
 
 ```
 python3 test_verifactu.py
 node test_verifactu.js
 python3 test_xml.py      # requiere lxml
+python3 test_cli.py      # requiere lxml
 ```
 
 `vectores_aeat.json` trae los 3 ejemplos de huella de la especificación (primer registro, alta encadenada y anulación) y las URL de ejemplo del documento del QR.

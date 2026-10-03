@@ -1,0 +1,3 @@
+nif_emisor;nombre_emisor;num_serie;fecha;tipo;descripcion;tipo_iva;base;cuota;nif_destinatario;nombre_destinatario;fecha_hora_huso
+89890001K;EMISOR EJEMPLO SL;12345678/G33;01-01-2024;F1;Servicios de ejemplo;21.00;111.10;12.35;B12345674;CLIENTE EJEMPLO SL;2024-01-01T19:20:30+01:00
+89890001K;EMISOR EJEMPLO SL;12345679/G34;01-01-2024;F1;Servicios de ejemplo;21.00;111.10;12.35;B12345674;CLIENTE EJEMPLO SL;2024-01-01T19:20:35+01:00
